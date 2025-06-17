@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafio HTML</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #141414;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #070707ac;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin: 10px auto;
+            border-radius: 10px;
+            border: 2px solid #1d1d1d;
+        }
+
+        .logo {
+            width: 40px;
+            padding: 0 8px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+        }
+
+        nav a {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgb(67, 67, 189);
+        }
+
+        /* MAIN */
+        main {
+            background-color: #262626;
+        }
+
+        .main-content {
+            display: flex;
+            border-radius: 10px;
+            padding: 8px;
+            background-color: #3a3a3a;
+            color: white;
+        }
+
+        #about {
+            width: 100%;
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            margin-top: 20px;
+            background-color: #ffffff22;
+            padding: 8px;
+            border-left: 4px solid #4343bd;
+            width: max-content;
+        }
+
+        section.containers {
+            display: flex;
+            flex-grow: 1;
+            gap: 10px;
+        }
+
+        .more {
+            padding: 10px;
+            margin: 20px 0;
+            width: 50%;
+            background-color: #ffffff22;
+            color: #fff;
+            border-radius: 14px;
+            border: 1px solid #fff;
+        }
+
+        .more ul {
+            margin-top: 10px;
+            list-style: none;
+        }
+
+        .more h2 {
+            color: #4343bd;
+            background-color: #fff;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .more ul h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        section.side-bar {
+            display: flex;
+            flex: 1;
+            height: max-content;
+            color: #fff;
+            margin-top: 20px;
+            background-color: #ffffff22;
+            padding: 10px; 
+            width: 50%;
+            border: 1px solid #fff;
+            border-radius: 14px;
+        }
+
+        footer {
+            background-color: #070707ac;
+            flex-direction: column;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin: 10px auto;
+            border-radius: 10px;
+            border: 2px solid #1d1d1d;
+        }
+    </style>
+
+    <body>
+        <header>
+            <div class="logo">
+                <svg
+                    fill="#ffffff"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <path
+                                d="M2,9H9V2H2ZM4,4H7V7H4Zm7-2V9h7V2Zm5,5H13V4h3ZM2,18H9V11H2Zm2-5H7v3H4Zm7,5h7V11H11Zm2-5h3v3H13Z"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Socials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="main-content">
+                <article>
+                    <div id="about">
+                        <h1 style="font-size: 24px">This is a title</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quaerat molestias expedita provident magnam
+                            illo consectetur enim laborum voluptates.
+                        </p>
+                    </div>
+                    <hr />
+                    <blockquote>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit.
+                    </blockquote>
+                </article>
+            </section>
+
+            <section class="containers">
+                <div class="more">
+                    <h2 style="font-size: 20px">Skills</h2>
+                    <ul>
+                        <h3>Main Skills</h3>
+                        <li><i>HTML</i></li>
+                        <li><u>CSS</u></li>
+                        <li><strong>JAVASCRIPT</strong></li>
+
+                        <h4>Database</h4>
+                        <li><mark>SQL</mark></li>
+
+                        <h5>Secundary Skills</h5>
+                        <li><small>Python</small></li>
+                        <li><sub>Java</sub></li>
+                        <li><sup>C</sup></li>
+
+                        <h6>Need to learn</h6>
+                        <li><del>PHP</del></li>
+                    </ul>
+                </div>
+                
+                <section class="side-bar">
+                    <aside>
+                        <div>
+                            <h2>Aside Section</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. <abbr title="Quaerat">Quaerat</abbr> molestias expedita
+                                provident magnam illo consectetur enim laborum
+                                voluptates.
+                            </p>
+                        </div>
+                    </aside>
+                </section>
+            </section>
+            </section>
+        </main>
+
+        <footer>
+            <h2>Desenvolvido por <strong>Guilherme Augusto</strong></h2>
+            <p>Desafio DIO</p>
+        </footer>
+    </body>
+</html>
