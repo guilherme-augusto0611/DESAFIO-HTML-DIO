@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafio Wikipedia</title>
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            border-bottom: 2px solid #cecece;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        header figure img {
+            width: 40px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 0px;
+        }
+
+        i {
+            color: rgb(88, 88, 247);
+            cursor: pointer;
+        }
+
+        i:hover {
+            text-decoration: underline;
+        }
+
+        figcaption {
+            color: rgb(88, 88, 247);
+            text-decoration: underline;
+            padding: 10px;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        .main-content {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .main-content p {
+            font-size: 18px;
+        }
+
+        .side-bar {
+            grid-area: 1 / 2 / 2 / 3;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 6px;
+            border: 1px solid #a09f9f;
+            height: fit-content;
+            padding: 0 10px 10px;
+        }
+
+        .side-bar h1 {
+            background-color: #e3e2e2;
+        }
+
+        .main-content article {
+            background-color: #e3e2e2;
+            border: 1px solid #a09f9f;
+            text-align: justify;
+            padding: 0 8px;
+        }
+
+        #intro {
+            text-align: center;
+            background-color: #fff;
+            font-size: 22px;
+        }
+
+        .hist-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            padding: 10px;
+            margin: 10px auto 10px;
+            flex-direction: column;
+            background-color: #bfbebe;
+            border: 1px solid #a09f9f;
+        }
+
+        .win {
+            width: 450px;
+            border: 1px solid #a09f9f;
+        }
+
+        #caracteristicas {
+            margin-bottom: 10px;
+        }
+
+        #referencias {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 30px;
+            margin-top: 20px;
+        }
+
+        ol {
+            list-style: none;
+            gap: 10px;
+        }
+
+        .lista1 {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .lista2 {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e3e2e2;
+            margin-top: 10px;
+        }
+    </style>
+
+    <body>
+        <header>
+            <figure>
+                <img
+                    src="imagens/windows-logo.svg"
+                    alt="Logo Microsoft Windows"
+                />
+            </figure>
+        </header>
+
+        <main>
+            <section class="main-content" alt="Conteúdo principal">
+                <article>
+                    <h1 id="intro">1. Microsoft Windows</h1>
+                    <hr />
+                    <p>
+                        <strong>Microsoft Windows </strong> (ou simplesmente
+                        <strong>Windows</strong>) é uma família de
+                        <i>sistemas</i>
+                        operacionais desenvolvidos, comercializados e vendidos
+                        pela Microsoft. É constituída por várias famílias de
+                        sistemas operacionais, cada qual atendendo a um
+                        determinado setor da <i>indústria</i> da
+                        <i>computação</i>, sendo que o sistema geralmente é
+                        associado com a arquitetura <i>IBM PC compatível</i>. As
+                        famílias ativas do Windows incluem <i>Windows NT</i> e
+                        <i>Windows Embedded</i>; estes podem abranger
+                        subfamílias, como <i>Windows CE</i> ou
+                        <i>Windows Server</i>. Entre algumas das famílias
+                        Windows extintas estão o <i>Windows 9x</i>, o
+                        <i>Windows 10 Mobile</i> e o <i>Windows Phone</i>.
+                    </p>
+
+                    <p>
+                        O Microsoft Windows passou a dominar o mercado de
+                        <i>computadores pessoais</i> (PC) do mundo, com mais de
+                        90% de <i>participação de mercado</i>, superando o
+                        <i>macOS</i>, que havia sido introduzido em 1984. A
+                        <i>Apple</i> chegou a ver o Window como uma invasão
+                        injusta em sua inovação no desenvolvimento de produtos
+                        GUI, como o <i>Lisa</i> e o
+                        <i>Macintosh </i>(eventualmente resolvido na Justiça em
+                        favor da Microsoft em 1993). Nos PCs, o Windows ainda é
+                        o sistema operacional mais popular do mundo.
+                    </p>
+
+                    <p>
+                        No entanto, em 2014, a Microsoft admitiu a perda da
+                        maioria do mercado global de sistemas operacionais do
+                        <i>sistema operacional móvel Android</i>, devido ao
+                        enorme crescimento nas vendas de <i>smartphones</i>. Em
+                        2014, o número de dispositivos Windows vendidos era
+                        menos de 25% dos dispositivos Android vendidos. Essas
+                        comparações, no entanto, podem não ser totalmente
+                        relevantes, já que os dois sistemas operacionais visam
+                        plataformas tradicionalmente diferentes. Em setembro de
+                        2022, a versão mais recente do Windows para PCs,
+                        <i>tablets</i>, smartphones e dispositivos embutidos é o
+                        <i>Windows 11</i>. A versão mais recente para servidores
+                        é o <i>Windows Server 2025</i>. Uma versão especializada
+                        do Windows é executada no console de jogos
+                        <i>Xbox One, Xbox Series X e Series S.</i>
+                    </p>
+
+                    <p>
+                        Atualmente o sistema Windows possui a versão LTSC (sigla
+                        de <i>Long-Term Servicing Channel</i>) que em português
+                        significa Canal de Manutenção de Longo Prazo; uma versão
+                        baseada na estabilidade, que permite o usuário adiar as
+                        atualizações de recursos e focar apenas nas correções
+                        essenciais <i>(patchs de segurança)</i> que são lançados
+                        mensalmente. Em 2023 a versão 11 do sistema recebeu um
+                        modo LTSC.
+                    </p>
+                    <hr />
+
+                    <h2 id="historia">2. História</h2>
+                    <hr />
+                    <p style="margin-bottom: 20px">
+                        A Microsoft começou a desenvolver o Microsoft Windows em
+                        setembro de 1981. Os primeiros Windows, como o
+                        <i>1.0, 2.0</i>, são compatíveis apenas com partições
+                        formatadas em <i>sistema de ficheiros FAT</i>, nesse
+                        caso, o FAT 16. O <i>3.x</i> poderia ser instalado em
+                        <i>FAT 32</i>, porém necessita ser instalado o MS-DOS
+                        7.10, que era incluído nos disquetes de inicialização do
+                        Windows 95 OSR2 e Windows 98, necessitando modificar
+                        alguns arquivos para permitir seu funcionamento. Ao
+                        mudar do 3.1 para o 95B (<i>Windows 95</i> OSR 2/OSR
+                        2.1), os HD's poderiam ser formatados em FAT 32.
+                        Inicialmente lançado com o <i>Windows NT</i>, a
+                        tecnologia <i>NTFS</i> é ainda hoje (2020) o padrão de
+                        fato para esta classe. Com a convergência de ambos os
+                        sistemas, o <i>Windows XP</i> passou também a preferir
+                        este formato.
+                    </p>
+
+                    <h4 id="win95">2.1 Windows 95</h4>
+                    <p>
+                        O <i>Windows 95</i> foi lançado em 24 de agosto de 1995.
+                        Ele era um Windows completamente novo, e de nada lembra
+                        os Windows da família 3.xx. O salto do Windows 3.1 ao
+                        Windows 95 era muito grande e ocorreu uma mudança
+                        radical na forma da apresentação da interface.
+                        Introduziu o Menu Iniciar e a Barra de Tarefas. Enquanto
+                        nesta versão, o MS-DOS perdeu parte da sua importância
+                        visto que o Windows já consegue ativar-se sem precisar
+                        da dependência prévia do MS-DOS. As limitações de
+                        memória oferecidas ainda pelo <i>Windows 3.0</i> foram
+                        praticamente eliminadas nesta versão. O sistema
+                        <i>multitarefa</i> tornou-se mais eficaz. Utilizava o
+                        <i>sistema de ficheiros</i> FAT-16 (VFAT). Os ficheiros
+                        (arquivos) puderam a partir de então ter 255 caracteres
+                        de nome (mais uma extensão de três caracteres que indica
+                        o conteúdo do arquivo, facilitando assim sua
+                        identificação e podendo ser associado para abertura em
+                        determinados programas). O salto foi enorme, e o
+                        lançamento foi amplamente divulgado pela imprensa,
+                        inclusive pelas grandes redes de televisão. Existe uma
+                        outra versão do Windows 95, lançada no início de 1996,
+                        chamada de Windows 95 OEM Service Release 2 (OSR 2), com
+                        suporte nativo ao sistema de arquivos FAT32. Já o
+                        Windows 95, a partir da revisão OSR 2.1, incluía o
+                        suporte nativo ao Barramento Serial Universal (USB) e
+                        Ultra DMA (UDMA). Foi lançada ainda uma versão especial,
+                        o Windows 95 Plus!, com um pacote de diferentes temas
+                        visuais e sonoros para personalização do sistema
+                        operacional. Esta versão também incluía o navegador
+                        Internet Explorer.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows95.png"
+                            alt="Imagem do Windows 95"
+                        />
+                        <figcaption>
+                            <b>Windows 95</b>
+                        </figcaption>
+                    </figure>
+
+                    <h4 id="winCE">2.2 Windows CE</h4>
+                    <p>
+                        <i>Windows CE</i> (às vezes abreviado para WinCE, apesar
+                        de a Microsoft já ter negado esta relação), é o
+                        <i>sistema operativo Windows</i> para dispositivos
+                        portáteis, Tablet PCs e <i>sistemas embarcados</i>. Ele
+                        equipa desde micro-computadores até
+                        <i>telefones celulares</i> mais antigos (os smartphones
+                        mais atuais usam <i>Android</i>, <i>Symbian</i> e
+                        <i>Windows Phone</i>) e o <i>Dreamcast</i>. É suportado
+                        no <i>Intel x86</i> e compatíveis, <i>MIPxS</i>, ARM, e
+                        processadores SuperH Hitachi. O Windows CE não deve ser
+                        confundido com o <i>Windows Embedded</i> Standard, que é
+                        uma versão componentizada e reduzida dos sistemas
+                        operacionais Windows para desktops. Trata-se de um
+                        sistema operacional distinto, com um projeto diferente
+                        de kernel, diferente da versão desktop do Windows, sendo
+                        a base para projetos recentes como o Windows Phone.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows_CE.png"
+                            alt="Windows CE"
+                        />
+                        <figcaption><b>Windows CE</b></figcaption>
+                    </figure>
+
+                    <h4 id="winXP">2.3 Windows XP</h4>
+                    <p>
+                        O <i>Windows XP</i> foi o primeiro da família a oferecer
+                        suporte a sistemas de <i>64 bits</i>. O nome "XP" deriva
+                        de eXPerience. É o sucessor de ambos os
+                        <i>Windows 2000 </i>e <i>Windows ME</i> e é o primeiro
+                        sistema operacional para consumidores produzido pela
+                        Microsoft construído em nova <i>arquitetura</i> e
+                        <i>núcleo</i>
+                        (<i>Windows NT 5.1</i>). O Windows XP foi lançado no dia
+                        25 de outubro de 2001 e mais de 400 milhões de cópias
+                        estavam em uso em janeiro de 2006, de acordo com
+                        estimativas feitas naquele mês pela empresa de
+                        estatísticas IDC. Foi sucedido pelo
+                        <i>Windows Vista</i> lançado para pré-fabricantes no dia
+                        8 de novembro de 2006 e para o público em geral em 30 de
+                        janeiro de 2007. Suas vendas cessaram no dia 30 de junho
+                        de 2008, porém ainda era possível adquirir novas
+                        licenças com os desenvolvedores do sistema até 31 de
+                        janeiro de 2009 ou comprando e instalando as edições
+                        Ultimate ou Business do Windows Vista e então realizando
+                        o <i>downgrade</i> para o Windows XP. Até o final de
+                        julho de 2010, o Windows XP era o sistema operacional
+                        mais utilizado no mundo com 62.43% de participação no
+                        mercado, tendo chegado a 85% em dezembro de 2006. Os
+                        números mostram a queda exponencial do uso do sistema
+                        operacional, acelerada pelo lançamento do
+                        <i>Windows 7</i>, que chegou para corrigir os problemas
+                        do <i>Vista</i>.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows_XP.png"
+                            alt="Windows XP"
+                        />
+                        <figcaption>
+                            <b>Windows XP</b>
+                        </figcaption>
+                    </figure>
+
+                    <h4 id="winVista">2.4 Windows Vista</h4>
+                    <p>
+                        O <i>Windows Vista</i> foi a sexta versão do Windows,
+                        lançada em 30 de janeiro de 2007. Antes do seu anúncio
+                        em 22 de julho de 2005, o Windows Vista era conhecido
+                        pelo <i>nome de código</i> Longhorn. O lançamento do
+                        Windows Vista veio mais de cinco anos depois da
+                        introdução do seu predecessor, o <i>Windows XP</i>. O
+                        Windows Vista possui novos recursos e funções dos que os
+                        apresentados por sua versão anterior o Windows XP, como
+                        uma nova <i>interface gráfica</i> do usuário, apelidada
+                        de <i>Windows Aero</i>. A partir desta versão o sistema
+                        Windows possui uma restrição relacionada aos componentes
+                        de mídia de acordo com algumas <i>regiões</i>,
+                        resultando nas versões "Windows N" e "Windows KN", que
+                        são distribuídas na Europa e na Coréia respectivamente,
+                        onde o “N” representa “not with Media Player” (versão do
+                        sistema sem o <i>Windows Media Player</i> integrado) e o
+                        “K” é uma referência à Coreia. Os componentes de mídia
+                        relacionados ao programa Windows Media Player que foram
+                        excluídos da versão N e KN são: o programa reprodutor de
+                        música e vídeo (Windows Media Player); gravador de Voz;
+                        <i>skype</i>; o activeX do reprodutor; Media Foundation;
+                        Windows Portable Devices (WPD); a configuração
+                        <i>Windows Media Format</i>; Windows Media DRM; o
+                        sistema de compartilhamento de mídia, a configuração
+                        Play-To; os <i>codecs de áudio</i> MPEG, WMA, AAC, FLAC,
+                        ALAC, AMR e, Dolby Digital; os
+                        <i>codecs de vídeo</i> VC-1, MPEG4, H.264, H.265 e,
+                        H.263. Assim a empresa Microsoft oferece ao usuário o
+                        pacote opcional e
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows_Vista.png"
+                            alt="Windows Vista"
+                        />
+                        <figcaption><b>Windows Vista</b></figcaption>
+                    </figure>
+
+                    <h4 id="win7">2.5 Windows 7</h4>
+                    <p>
+                        Windows 7 foi lançado para empresas no dia 22 de julho
+                        de 2009, e começou a ser vendido livremente para
+                        usuários comuns às 00h00 do dia 22 de outubro de 2009,
+                        menos de 3 anos depois do lançamento de seu predecessor,
+                        <i>Windows Vista</i>. Pouco mais de três anos depois, o
+                        seu sucessor, <i>Windows 8</i>, foi lançado em 26 de
+                        outubro de 2012. Diferente do Windows Vista, que
+                        introduziu um grande número de novas características,
+                        Windows 7 foi uma atualização mais modesta e focalizada
+                        para ser mais eficiente, limpo e mais prático de usar,
+                        com a intenção de torná-lo totalmente compatível com
+                        aplicações e hardwares com os quais o Windows Vista já
+                        era compatível.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows_7.png"
+                            alt="Windows 7"
+                        />
+                        <figcaption><b>Windows 7</b></figcaption>
+                    </figure>
+
+                    <h4 id="win8">2.6 Windows 8</h4>
+                    <p>
+                        O Windows 8 foi uma versão do Microsoft Windows, uma
+                        série de sistemas operacionais desenvolvidos pela
+                        <i>Microsoft</i> para <i>computadores</i> pessoais,
+                        <i>laptops</i> e <i>tablets</i>. É o sucessor do
+                        <i>Windows 7</i>. Foi anunciado oficialmente por
+                        <i>Steve Ballmer</i>, <i>diretor executivo</i> da
+                        <i>Microsoft</i>, durante a conferência de
+                        pré-lançamento do sistema operacional. O Windows 8
+                        Developer Preview, primeira versão <i>beta</i> do
+                        sistema, foi lançado no dia 13 de setembro de 2011 e
+                        depois foi seguida pela versão Consumer Preview no dia
+                        <i>29 de fevereiro de 2012</i>. No dia 31 de maio de
+                        2012, foi liberada para download a versão Windows 8
+                        Release Preview. A versão final foi lançada mundialmente
+                        em 26 de outubro de 2012. O Windows 8 foi substituído
+                        pelo <i>Windows 8.1</i>. O Windows 8 introduziu grandes
+                        mudanças na plataforma e na <i>interface</i> para
+                        melhorar a experiência de usuário em tablets, já que o
+                        Windows agora competia com sistemas operacionais móveis,
+                        o <i>Android</i> e o <i>iOS</i>. Essas alterações
+                        incluíram um <i>Windows Shell</i> otimizado para o toque
+                        baseado na linguagem de design <i>Metro UI</i> da
+                        Microsoft e na nova <i>Tela Iniciar</i> (que exibe
+                        aplicativos e conteúdos atualizados dinamicamente em uma
+                        grade de Live Tiles), uma nova plataforma para o
+                        desenvolvimento de "aplicativos" com ênfase na entrada
+                        touchscreen, integração com serviços online (incluindo a
+                        capacidade de sincronizar aplicativos e configurações
+                        entre os dispositivos) e adição da <i>Windows Store</i>,
+                        um serviço de distribuição on-line de novos softwares
+                        que são executados na Tela Iniciar. Muitos desses
+                        recursos foram inspirados no Windows Phone,
+                        <i>sistema operacional móvel</i> dos aparelhos da linha
+                        <i>Nokia Lumia</i>. O Windows 8 também adicionou suporte
+                        para USB 3.0, discos rígidos de formato avançado,
+                        <i>comunicação por campo de proximidade</i> (NFC) e
+                        <i>computação em nuvem</i>. Recursos adicionais de
+                        segurança foram introduzidos, como um software de
+                        antivírus embutido, integração com o serviço de
+                        filtragem de phishing, <i>Microsoft SmartScreen</i> e
+                        suporte para o UEFI Secure Boot em dispositivos
+                        suportados com <i>firmware</i> UEFI, para evitar que um
+                        <i>malware</i> infecte o processo de inicialização. O
+                        Windows 8 foi lançado para uma recepção crítica mista.
+                        Reações positivas relacionadas melhorias de desempenho,
+                        melhorias de segurança e melhor suporte para
+                        dispositivos sensíveis ao toque foram positivas porém a
+                        nova interface de usuário do sistema operacional foi
+                        amplamente criticada por ser potencialmente confusa e de
+                        difícil usabilidade, especialmente quando usada em um
+                        dispositivo com teclado e mouse em vez de uma tela
+                        sensível ao toque. Apesar dessas deficiências, 60
+                        milhões de licenças do Windows 8 foram vendidas até
+                        janeiro de 2013, um número que incluía upgrades e vendas
+                        para OEMs para novos PCs.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows_8.png"
+                            alt="Windows 8"
+                        />
+                        <figcaption><b>Windows 8</b></figcaption>
+                    </figure>
+
+                    <h4 id="win10">2.7 Windows 10</h4>
+                    <p>
+                        A Microsoft lançou o Windows 10 Technical Preview (nome
+                        de código Threshold) no dia 30 de setembro de 2014 e em
+                        seu lançamento foi enfatizado o retorno do
+                        <i>Menu Iniciar</i>
+                        de que tanto os utilizadores sentiam falta. Houve muitas
+                        alterações quando se compara o design com a versão
+                        anterior (<i>Windows 8.1</i>). A promessa do novo
+                        sistema operacional era unir o melhor de dois mundos que
+                        se tornaram distantes (<i>Windows 7</i>, focado em
+                        desktops, e Windows 8.1, focado em tablets). Outro
+                        recurso apresentado foram as novas Live Tiles, que podem
+                        ser inseridas agora, ao lado do Menu Iniciar, e
+                        dimensionadas, tal como no Windows 8.1. Além disso, o
+                        <i>Windows 10</i> traz diversos novos recursos e
+                        inovações que superam, em quantidade, as apresentadas no
+                        Windows Vista. Diversos recursos e funcionalidades foram
+                        substituídas/remodeladas ou, simplesmente, deletadas,
+                        tornando o sistema mais limpo e fluido. Funcionalidades
+                        comuns, como calculadora por exemplo, foram substituídas
+                        pelos Aplicativos Universais. Se o usuário ainda não
+                        desejar ter o menu iniciar de volta, pode substitui-lo
+                        pela Tela Iniciar clicando com o botão direito sobre a
+                        barra de ferramentas e, na aba "Menu Iniciar",
+                        desabilitar a opção "Usar o Menu Iniciar ao invés da
+                        Tela Iniciar". No dia 29 de julho de 2015, a versão
+                        final do Windows 10 foi lançada pela <i>Microsoft</i>.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows_10.jpg"
+                            alt="Windows 10"
+                        />
+                        <figcaption><b>Windows 10</b></figcaption>
+                    </figure>
+
+                    <h4 id="win11">2.8 Windows 11</h4>
+                    <p>
+                        O Windows 11 foi lançado em 5 de outubro de 2021,
+                        mostrando uma interface muito próxima da aparência do
+                        cancelado Windows 10X. As maiores novidades são o
+                        redesign do Menu Iniciar, a nova tela de widgets
+                        (pequenos interfaces flutuantes de <i>aplicativos</i> na
+                        área de trabalho que exibem funções/informações
+                        específicas). O sistema foi criticado várias vezes
+                        devido a falta de funcionalidades em relação ao
+                        antecessor. Em abril de 2023, a Microsoft anunciou que
+                        esta versão do sistema operacional teria um modo LTSC.
+                    </p>
+
+                    <figure class="hist-media">
+                        <img
+                            class="win"
+                            src="imagens/Windows-11.jpg"
+                            alt="Windows 11"
+                        />
+                        <figcaption><b>Windows 11</b></figcaption>
+                    </figure>
+
+                    <h3 id="caracteristicas">Características Técnicas</h3>
+                    <p>
+                        A principal <i>linguagem de programação</i> usada para
+                        escrever o <i>código-fonte</i> das várias versões do
+                        Windows é o C e algumas partes com C++ e Assembly. Até a
+                        versão 3.11, o sistema rodava em <i>16 bits</i> (apesar
+                        da possibilidade de instalar um update chamado Win32s
+                        para adicionar suporte a programas <i>32 bits</i>), e
+                        daí em diante, em 32 bits. Desde o <i>Windows XP</i> e
+                        <i>Windows Server 2003</i> existe suporte para a
+                        tecnologia 64 bits. A partir do Windows 11, não há mais
+                        suporte para sistemas 32 bits. Os sistemas de 64 bits
+                        não possuem mais suporte para rodar nativamente
+                        aplicativos de 16 bits, sendo necessário o uso de
+                        emuladores/máquinas virtuais. Os bits são relacionados
+                        ao volume de dados que um <i>microprocessador</i> é
+                        capaz de lidar. Se um processador tem uma arquitetura de
+                        64 bits, ele é capaz de lidar com dados na ordem de 264,
+                        ou seja, 18 446 744 073 709 552 000. Só que para isso
+                        ser possível, é necessário que o sistema operacional
+                        seja de 64 bits, caso contrário ele trabalhará com
+                        somente com instruções de 32 bits (Se o sistema for de
+                        32 bits). Sistemas operacionais de 64 bits também
+                        endereçam uma quantidade maior de RAM, suportando até
+                        192 GB (<i>Windows 7 Ultimate</i>) ou 128 GB (<i
+                            >Windows XP Professional</i
+                        >), contra 3,2 GB dos sistemas de 32 bits. Outra
+                        característica denominada de herança maldita devido o
+                        fato de ter herdado essa regra do <i>DOS</i> é o fato de
+                        não se pode criar pastas com os determinados nomes: con,
+                        prn, aux, com1 e lpt1. Trata-se de uma antiga herança
+                        que os SOs Windows carregam do <i>MS-DOS</i> e são
+                        palavras reservadas para a comunicação interna do SO.
+                        Através do Prompt de Comandos é possível criar pastas e
+                        arquivos com qualquer um dos nomes acima. Mas o sistema
+                        impede que os documentos sejam editados e excluídos pelo
+                        <i>Windows Explorer</i>.
+                    </p>
+
+                    <h2 style="margin-top: 20px">Referências</h2>
+                    <hr />
+                    <section id="referencias">
+                        <ol class="lista1">
+                            <li>
+                                1.
+                                <i>«The Unusual History of Microsoft Windows»</i
+                                >. Consultado em 22 de abril de 2007
+                            </li>
+                            <li>
+                                2. Keizer, Gregg (14 de julho de 2014).
+                                <i
+                                    >«Microsoft gets real, admits its device
+                                    share is just 14%»</i
+                                >. IDG
+                            </li>
+                            <li>
+                                3.
+                                <i
+                                    >«Xbox One Architecture Finally Explained -
+                                    Runs OS 'Virtually Indistinguishable' from
+                                    Windows 8»</i
+                                >. WCCFtech
+                            </li>
+                            <li>
+                                4. TudoCelular.com (4 de abril de 2024).
+                                <i
+                                    >«Imagens LTSC do Windows 11 24H2 vazam
+                                    antes do anúncio oficial»</i
+                                >. TudoCelular.com. Consultado em 7 de junho de
+                                2024
+                            </li>
+                            <li>
+                                5. <i>«Windows Embedded Homepage»</i>.
+                                Microsoft.com. Consultado em 14 de novembro de
+                                2010
+                            </li>
+                            <li>
+                                6.
+                                <i
+                                    >«Microsoft Announces Windows XP and Office
+                                    XP»</i
+                                >. Microsoft PressPass. Microsoft. 5 de
+                                fevereiro de 2001. Consultado em 13 de maio de
+                                2006. Arquivado do original em 21 de abril de
+                                2010
+                            </li>
+                            <li>
+                                7. Jeremy Kirk (18 de janeiro de 2006).
+                                <i
+                                    >«Analyst: No effect from tardy XP service
+                                    pack»</i
+                                >. ITworld.com. Consultado em 26 de novembro de
+                                2016. Arquivado do original em 17 de março de
+                                2007
+                            </li>
+                            <li>
+                                8. <i>«Trend for 'Windows XP'»</i>. Market share
+                                for browsers, operating systems and search
+                                engines. Net Applications. Consultado em 13 de
+                                abril de 2009
+                            </li>
+                            <li>
+                                9. Microsoft (22 de julho de 2005).
+                                <i
+                                    >«Media Alert: Microsoft Unveils Official
+                                    Name for "Longhorn" and Sets Date for First
+                                    Beta Targeted at Developers and IT
+                                    Professionals»</i
+                                >. Consultado em 2 de janeiro de 2007
+                            </li>
+                            <li>
+                                10.
+                                <i
+                                    >«Windows 10 N e Windows 10 KN tem
+                                    diferentes recursos de mídia; entenda»</i
+                                >. TechTudo. 28 de julho de 2016. Consultado em
+                                28 de fevereiro de 2024
+                            </li>
+                            <li>
+                                11. <i>«Por que Windows 7?»</i>. WinAjuda.com.
+                                16 de outubro de 2008
+                            </li>
+                            <li>
+                                12.
+                                <i>«Sinofsky shows off Windows 8 at D9»</i> (em
+                                inglês). CNET. Consultado em 14 de Julho de 2011
+                            </li>
+                            <li>
+                                13.
+                                <i
+                                    >«Welcome to Windows 8 – The Developer
+                                    Preview - Building Windows 8 - Site Home -
+                                    MSDN Blogs»</i
+                                >. web.archive.org. 23 de setembro de 2011.
+                                Consultado em 5 de setembro de 2021
+                            </li>
+                            <li>
+                                14. Durval Ramos Junior (18 de Julho de 2012).
+                                <i
+                                    >«Windows 8 chega as lojas em 26 de Outubro
+                                    de 2012»</i
+                                >. Tecmundo. Consultado em 19 de Julho de 2012
+                            </li>
+                        </ol>
+                        <ol class="lista2">
+                            <li>
+                                15.
+                                <i
+                                    >«Microsoft: 60 million Windows 8 licenses
+                                    sold to date»</i
+                                >. ZDNet
+                            </li>
+                            <li>
+                                16.
+                                <i
+                                    >«Top 7 Desktops OSs from Sept 2012 to Sept
+                                    2014 | StatCounter Global Stats»</i
+                                >. StatCounter. Setembro de 2014. Consultado em
+                                7 de outubro de 2014
+                            </li>
+                            <li>
+                                17. Tecmundo (30 de Setembro de 2014).
+                                <i
+                                    >«Windows 10: confirmado o nome do novo
+                                    Windows»</i
+                                >
+                            </li>
+                            <li>
+                                18. <i>«Windows 10 is for suckers»</i>.
+                                Computerworld. Consultado em 3 de setembro de
+                                2015
+                            </li>
+                            <li>
+                                19.
+                                <i
+                                    >«Unificação total, a agressiva aposta da
+                                    Microsoft com Windows 10»</i
+                                >
+                            </li>
+                            <li>
+                                20.
+                                <i
+                                    >«5 funções básicas que o Windows 11 não
+                                    possui ou precisa melhorar»</i
+                                >. www.tecmundo.com.br. Consultado em 22 de
+                                março de 2023
+                            </li>
+                            <li>
+                                21.
+                                <i
+                                    >Versões de 64 bits do Windows não oferecem
+                                    suporte a componentes de 16 bits, processos
+                                    de 16 bits ou aplicativos de 16 bits</i
+                                >
+                            </li>
+                            <li>
+                                22.
+                                <i
+                                    >«Processadores de 64 bits x Processadores
+                                    de 32 bits»</i
+                                >. www.infowester.com. Consultado em 20 de abril
+                                de 2012
+                            </li>
+                            <li>
+                                23.
+                                <i
+                                    >Por que é impossível criar uma pasta
+                                    chamada "con" no Windows?</i
+                                >
+                            </li>
+                            <li>
+                                24.
+                                <i
+                                    >Por que não é possível criar pastas com o
+                                    nome "Con" no Windows?</i
+                                >
+                            </li>
+                            <li>
+                                25.
+                                <i
+                                    >«WineHQ - é uma implementação livre da API
+                                    de programação do Windows rodando sobre X,
+                                    OpenGL e distribuições de UNIX (Linux,
+                                    MAC)»</i
+                                >. www.winehq.org. Consultado em 14 de fevereiro
+                                de 2011
+                            </li>
+                            <li>
+                                26.
+                                <i
+                                    >«CrossOver: É uma implementação comercial
+                                    do Wine com foco em aplicativos.»</i
+                                >. www.codeweavers.com. Consultado em 14 de
+                                fevereiro de 2011
+                            </li>
+                            <li>
+                                27.
+                                <i
+                                    >«ReactOS Website - é um sistema operacional
+                                    alternativo e livre que visa atingir um grau
+                                    de elevada compatibilidade com o Microsoft
+                                    Windows.»</i
+                                >. www.reactos.org. Consultado em 14 de
+                                fevereiro de 2011. Arquivado do original em 6 de
+                                outubro de 2011
+                            </li>
+                            <li>
+                                28.
+                                <i
+                                    >«TransGaming Inc - É uma implementação
+                                    comercial do Wine com foco em jogos usando
+                                    DirectX.»</i
+                                >. transgaming.com. Consultado em 14 de
+                                fevereiro de 2011
+                            </li>
+                            <li>
+                                29.
+                                <i
+                                    >«Darwine - É uma implementação do Wine para
+                                    Darwin e Mac OS X/ppc»</i
+                                >. darwine.sf.net. Consultado em 14 de fevereiro
+                                de 2011
+                            </li>
+                        </ol>
+                    </section>
+                </article>
+            </section>
+            <section class="side-bar" alt="Navegação do artigo">
+                <h1>Neste artigo</h1>
+                <a href="#intro">1. Introdução</a>
+                <a href="#historia">2. História</a>
+                <a href="#win95">2.1. Windows 95</a>
+                <a href="#winCE">2.2. Windows CE</a>
+                <a href="#winXP">2.3. Windows XP</a>
+                <a href="#winVista">2.4. Windows Vista</a>
+                <a href="#win7">2.5 Windows 7</a>
+                <a href="#win8">2.6. Windows 8</a>
+                <a href="#win10">2.7 Windows 10</a>
+                <a href="#win11">2.8 Windows 11</a>
+                <a href="#caracteristicas">Características Técnicas</a>
+                <a href="#referencias">Referências Bibliográficas</a>
+            </section>
+        </main>
+
+        <footer>
+            <h2>Desenvolvido por Guilherme Augusto</h2>
+            <p><strong>Desafio DIO</strong></p>
+        </footer>
+    </body>
+</html>
